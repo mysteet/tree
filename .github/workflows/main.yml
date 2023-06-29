@@ -8,6 +8,7 @@ on:
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
+    environment: prod
 
     steps:
       - name: Checkout code
@@ -29,4 +30,4 @@ jobs:
           no-cache: true
           tags: ${{ secrets.AWS_ECR_REPO }}:latest
         env:
-          REACT_APP_SERVER_URL: $env.REACT_APP_SERVER_URL
+          REACT_APP_SERVER_URL: ${{ secrets.REACT_APP_SERVER_URL }}
