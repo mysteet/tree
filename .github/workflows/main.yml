@@ -28,3 +28,5 @@ jobs:
           push: true
           no-cache: true
           tags: ${{ secrets.AWS_ECR_REPO }}:latest
+        env:
+          REACT_APP_SERVER_URL: $env.REACT_APP_SERVER_URL
