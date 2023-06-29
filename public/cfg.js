@@ -1,0 +1,1 @@
+window.ROOTS_URL = 'ROOTS_URL';

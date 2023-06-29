@@ -17,7 +17,7 @@ function Map() {
 
                 // Reverse Geocoding with Nominatim
                 const response = await axios.get(
-                    `${process.env.REACT_APP_SERVER_URL}/v1/street/story?lat=${e.latlng.lat}&lng=${e.latlng.lng}`
+                    `${window.ROOTS_URL}/v1/street/story?lat=${e.latlng.lat}&lng=${e.latlng.lng}`
                 );
 
                 setRoad(response.data.city + ", " + response.data.street);
