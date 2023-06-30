@@ -1,1 +1,1 @@
-window.ROOTS_URL = 'ROOTS_URL';
+window.ROOTS_URL = 'ROOTS_URL_VAL';

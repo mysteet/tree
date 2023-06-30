@@ -23,7 +23,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       - name: Replace env variables in cfg.js
-        run: sed -i 's|ROOTS_URL|${{ secrets.ROOTS_URL }}|g' public/cfg.js
+        run: sed -i 's|ROOTS_URL|${{ secrets.ROOTS_URL_VAL }}|g' public/cfg.js
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
